@@ -1,66 +1,45 @@
 ﻿//Caminho para a classe; o namespace:
 using projeto.Models;
 
-Console.WriteLine("Digite uma letra");
-string letra = Console.ReadLine();
+//OPERADOR OR (Peper ||):
+//Entrada liberada apenas se o usuário possuir mais de 18 anos OU possuir autorização:
+bool maiorDeIdade = false;
+bool possuiAutorizacao = true;
 
-
-//RECONHECIMENTO DE LETRAS: SE É OU NÃO UMA VOGAL
-//ESTE MODO UTILIZA MUITAS LINHAS E TRATA-SE DE UMA CODIFICAÇÃO CANSATIVA E REPETITIVA
-// if (letra == "a")
-// {
-//     Console.WriteLine("Vogal");
-// }
-// else if (letra == "e")
-// {
-//     Console.WriteLine("Vogal");
-// }
-// else if (letra == "i")
-// {
-//     Console.WriteLine("Vogal");
-// }
-// else if (letra == "o")
-// {
-//     Console.WriteLine("Vogal");
-// }
-// else if (letra == "u")
-// {
-//     Console.WriteLine("Vogal");
-// }
-// else
-// {
-//     Console.WriteLine("Não é uma Vogal");
-//}
-
-
-//RECONHECIMENTO DE LETRAS: SE É OU NÃO UMA VOGAL
-//ESTE MODO UTILIZA POUCAS LINHAS, CODIFICAÇÃO MAIS LIMPA: 
-// if (letra == "a" ||
-//     letra == "e" ||
-//     letra == "i" ||
-//     letra == "o" ||
-//     letra == "u")
-// {
-//     Console.WriteLine("Vogal");
-// }
-// else
-// {
-//     Console.WriteLine("Não é uma Vogal");    
-// }
-
-//RECONHECIMENTO DE LETRAS: SE É OU NÃO UMA VOGAL USANDO SWITCH CASE:
-//OPERADOR DE SELEÇÃO:
-switch (letra)
+if (maiorDeIdade || possuiAutorizacao)
 {
-    case "a":
-    case "e":
-    case "i":
-    case "o":
-    case "u":
-        Console.WriteLine("Vogal");
-        break;
+    Console.WriteLine("Entrada liberada");
+}
+else
+{
+    Console.WriteLine("Entrada NÃO liberada");    
+}
 
-    default:
-        Console.WriteLine("Não é uma vogal");
-        break;
+//OPERADOR AND (&&):
+//Todas as condições precisam ser verdadeiras.
+bool presencaMinima = true;
+double media = 7.5;
+
+if (presencaMinima && media >= 7)
+{
+    Console.WriteLine("Aprovado");
+}
+else
+{
+    Console.WriteLine("Reprovado");    
+}
+
+//OPERADOR NOT (!)
+//Trata-se da inversão do valor boleano.
+bool choveu = false;
+bool estaTarde = false;
+
+//Se antes o boleano esperava true, com o !, ele passa a esperar false.
+if (!choveu && !estaTarde)
+{
+    Console.WriteLine("Vou pedalar");
+}
+else
+{
+    Console.WriteLine("Vou pedalar outro dia");
 }
