@@ -1,27 +1,66 @@
 ﻿//Caminho para a classe; o namespace:
 using projeto.Models;
 
-int quantidadeEstoque = 10;
-int quantidadeCompra = 0;
-bool possivelVenda = quantidadeCompra > 0 && quantidadeEstoque >= quantidadeCompra;
+Console.WriteLine("Digite uma letra");
+string letra = Console.ReadLine();
 
-Console.WriteLine($"Quantidade em estoque: {quantidadeEstoque}");    
-Console.WriteLine($"Quantidade na compra: {quantidadeCompra}");    
-Console.WriteLine($"É possível realizar a venda?: {possivelVenda}");    
 
-// = Operador de atribuição
-// == Comparação
+//RECONHECIMENTO DE LETRAS: SE É OU NÃO UMA VOGAL
+//ESTE MODO UTILIZA MUITAS LINHAS E TRATA-SE DE UMA CODIFICAÇÃO CANSATIVA E REPETITIVA
+// if (letra == "a")
+// {
+//     Console.WriteLine("Vogal");
+// }
+// else if (letra == "e")
+// {
+//     Console.WriteLine("Vogal");
+// }
+// else if (letra == "i")
+// {
+//     Console.WriteLine("Vogal");
+// }
+// else if (letra == "o")
+// {
+//     Console.WriteLine("Vogal");
+// }
+// else if (letra == "u")
+// {
+//     Console.WriteLine("Vogal");
+// }
+// else
+// {
+//     Console.WriteLine("Não é uma Vogal");
+//}
 
-if (quantidadeCompra == 0)
+
+//RECONHECIMENTO DE LETRAS: SE É OU NÃO UMA VOGAL
+//ESTE MODO UTILIZA POUCAS LINHAS, CODIFICAÇÃO MAIS LIMPA: 
+// if (letra == "a" ||
+//     letra == "e" ||
+//     letra == "i" ||
+//     letra == "o" ||
+//     letra == "u")
+// {
+//     Console.WriteLine("Vogal");
+// }
+// else
+// {
+//     Console.WriteLine("Não é uma Vogal");    
+// }
+
+//RECONHECIMENTO DE LETRAS: SE É OU NÃO UMA VOGAL USANDO SWITCH CASE:
+//OPERADOR DE SELEÇÃO:
+switch (letra)
 {
-    Console.WriteLine("Venda inválida");
-}
+    case "a":
+    case "e":
+    case "i":
+    case "o":
+    case "u":
+        Console.WriteLine("Vogal");
+        break;
 
-else if (possivelVenda)
-{
-    Console.WriteLine("Venda realizada com sucesso!");    
-}
-else
-{
-    Console.WriteLine("Quantidade insuficiente no estoque!");
+    default:
+        Console.WriteLine("Não é uma vogal");
+        break;
 }
