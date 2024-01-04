@@ -1,45 +1,29 @@
 ﻿//Caminho para a classe; o namespace:
 using projeto.Models;
 
-//OPERADOR OR (Peper ||):
-//Entrada liberada apenas se o usuário possuir mais de 18 anos OU possuir autorização:
-bool maiorDeIdade = false;
-bool possuiAutorizacao = true;
+Calculadora calculo = new Calculadora();
 
-if (maiorDeIdade || possuiAutorizacao)
-{
-    Console.WriteLine("Entrada liberada");
-}
-else
-{
-    Console.WriteLine("Entrada NÃO liberada");    
-}
+calculo.Somar(30, 15);
+calculo.Subtrair(30, 15);
+calculo.Multiplicar(30, 15);
+calculo.Dividir(30, 15);
+calculo.Potencia(3, 3);
+calculo.Seno(30);
+calculo.Cosseno(30);
+calculo.Tangente(30);
+calculo.RaizQuadrada(9);
 
-//OPERADOR AND (&&):
-//Todas as condições precisam ser verdadeiras.
-bool presencaMinima = true;
-double media = 7.5;
+//Incrementando números:
+int numero = 10;
 
-if (presencaMinima && media >= 7)
-{
-    Console.WriteLine("Aprovado");
-}
-else
-{
-    Console.WriteLine("Reprovado");    
-}
+Console.WriteLine("Incremetando o 10");
+numero++;
+Console.WriteLine(numero);
 
-//OPERADOR NOT (!)
-//Trata-se da inversão do valor boleano.
-bool choveu = false;
-bool estaTarde = false;
+//Decrementando números:
+int decr = 10;
 
-//Se antes o boleano esperava true, com o !, ele passa a esperar false.
-if (!choveu && !estaTarde)
-{
-    Console.WriteLine("Vou pedalar");
-}
-else
-{
-    Console.WriteLine("Vou pedalar outro dia");
-}
+Console.WriteLine("Decremetando o 10");
+decr--;
+Console.WriteLine(decr);
+
